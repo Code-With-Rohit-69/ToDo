@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.to-do {
+    width: 100%;
+    max-width: 540px;
+    background-color: #ffff;
+    margin: 100px auto 20px;
+    border-radius: 12px;
+    padding: 40px 30px 70px;
+}
+
+.to-do h1 {
+    color: #002765;
+    display: flex;
+    gap: 2vw;
+    font-size: 27px;
+    align-items: center;
+}
+
+.to-do h1 img {
+    width: 50px;
+}
+
+.inputBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-block: 20px;
+    padding: 3px;
+    overflow: hidden;
+    background-color: rgb(231, 231, 231);
+    border-radius: 20px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.inputBox button {
+    padding: 10px 27px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: #ffff;
+    background-color: rgb(255, 115, 0);
+}
+
+.unordered li{
+    list-style: none;
+    margin-bottom: 15px;
+    user-select: none;
+    position: relative;
+    padding: 12px 8px 12px 50px;
+}
+
+.unordered li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url('images/check.png');
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 29px;
+    height: 29px;
+    font-size: 17px;
+    text-align: center;
+}
+
+ul li span:hover{
+    background-color: rgb(233, 233, 233);
+}
